@@ -1,0 +1,106 @@
+.header {
+  top: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+}
+
+.menu img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__item {
+  margin-right: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu__item :last-child {
+  margin-right: 0;
+}
+
+.menu__item :hover::before {
+  content: "";
+  background-color: white;
+  width: 25px;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.menu__item a {
+  color: white;
+  font-family: "Alata", sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.hero {
+  background-image: url("/images/desktop/image-hero.jpg");
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__box {
+  width: 100%;
+}
+
+.hero__title {
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-size: 4.25rem;
+  text-transform: uppercase;
+  max-width: 550px;
+  padding: 2.6rem;
+  border: 3px solid white;
+  border-radius: 0.5%;
+}
+
+body {
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */

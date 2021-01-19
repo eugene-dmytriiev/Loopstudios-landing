@@ -1,0 +1,18 @@
+@import 'header';
+@import 'hero-section';
+@import 'variables';
+
+body{
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+    
+}

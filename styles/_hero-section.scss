@@ -1,0 +1,23 @@
+.hero{
+    background-image: url('/images/desktop/image-hero.jpg');
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__box{
+        width: 100%;
+    }
+
+    &__title{
+        font-family: $ff-title;
+        color: $color-white;
+        font-size: 4.25rem;
+        text-transform: uppercase;
+        max-width: 550px;
+        padding: 2.6rem;
+        border: 3px solid white;
+        border-radius: 0.5%;
+    }
+}
