@@ -1,6 +1,9 @@
 @import 'header';
 @import 'hero-section';
 @import 'variables';
+@import 'about';
+@import 'creations';
+@import 'footer';
 
 body{
     margin: 0;
@@ -12,7 +15,20 @@ body{
 }
 
 .container{
-    max-width: 1120px;
+    max-width: 1130px;
+    padding: 0 5px;
     margin: 0 auto;
     
+}
+
+.attribution{
+    background-color: $color-black;
+    color: $color-white;
+    font-family: $ff-title;
+    a{
+        text-decoration: underline;
+        color: $color-white;
+    }
+    padding-bottom: 1rem;
+    text-align: right;
 }

@@ -1,0 +1,70 @@
+@import 'variables';
+
+.creations{
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        &-text{
+            text-transform: uppercase;
+            font-family: $ff-title;
+            font-size: 2.625rem;
+        }
+
+        &-button{
+            max-width: 160px;
+            width: 100%;
+            max-height: 40px;
+            background: transparent;
+            border: $color-dark-gray 2px solid;
+            transition: background-color 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        &-button:hover{
+            background-color: $color-black;
+            color: $color-white;
+            border: $color-black;
+        }
+    }
+
+    &__tiles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+
+        &-tile {
+            position: relative;
+            
+            img{
+                min-width: 260px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+        }
+
+        &-text{
+            position: absolute;
+            color: $color-white;
+            font-family: $ff-title;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+
+            top: 78%;
+            padding-left: 3rem;
+
+            
+        }
+
+        &-tile > * {
+            flex: 1 1 25%;
+        }
+
+        
+    }
+    
+}

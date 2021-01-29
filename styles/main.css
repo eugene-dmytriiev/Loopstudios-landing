@@ -31,14 +31,14 @@
 }
 
 .menu__item {
-  margin-right: 2rem;
+  margin-left: 2rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.menu__item :last-child {
-  margin-right: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .menu__item :hover::before {
@@ -59,6 +59,10 @@
   text-decoration: none;
   position: relative;
   padding-bottom: 10px;
+}
+
+.menu__item:first-child {
+  margin-left: 0;
 }
 
 .hero {
@@ -89,6 +93,269 @@
   border-radius: 0.5%;
 }
 
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-end;
+  position: relative;
+}
+
+.interactive {
+  padding: 100px 0;
+}
+
+.interactive__image img {
+  max-width: 730px;
+  height: auto;
+}
+
+.interactive__text {
+  padding: 95px 0 0 95px;
+  margin-top: auto;
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  justify-items: center;
+  justify-self: end;
+  background-color: white;
+  margin-left: -10rem;
+}
+
+.interactive__text-title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.625rem;
+}
+
+.interactive__text-description {
+  font-family: "Alata", sans-serif;
+  font-size: 0.94rem;
+  text-align: justify;
+}
+
+.creations__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.creations__title-text {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.625rem;
+}
+
+.creations__title-button {
+  max-width: 160px;
+  width: 100%;
+  max-height: 40px;
+  background: transparent;
+  border: dimgray 2px solid;
+  -webkit-transition: background-color 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.creations__title-button:hover {
+  background-color: black;
+  color: white;
+  border: black;
+}
+
+.creations__tiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.creations__tiles-tile {
+  position: relative;
+}
+
+.creations__tiles-tile img {
+  min-width: 260px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.creations__tiles-text {
+  position: absolute;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  top: 78%;
+  padding-left: 3rem;
+}
+
+.creations__tiles-tile > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+}
+
+.header {
+  top: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+}
+
+.menu img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__item {
+  margin-left: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.menu__item :hover::before {
+  content: "";
+  background-color: white;
+  width: 25px;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.menu__item a {
+  color: white;
+  font-family: "Alata", sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.menu__item:first-child {
+  margin-left: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-family: "Alata", sans-serif;
+  font-size: 0.94rem;
+  margin-top: 150px;
+  padding-top: 40px;
+}
+
+.flex-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.flex-footer img {
+  max-height: 25px;
+  width: auto;
+  height: 100%;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__item {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.footer__item:hover::before {
+  content: "";
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.social {
+  gap: 1rem;
+}
+
+.social li {
+  position: relative;
+}
+
+.social__icon {
+  color: white;
+}
+
+.social__icon:hover::before {
+  content: "";
+  background-color: white;
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  top: 105%;
+}
+
 body {
   margin: 0;
   top: 0;
@@ -100,7 +367,21 @@ body {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1130px;
+  padding: 0 5px;
   margin: 0 auto;
+}
+
+.attribution {
+  background-color: black;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 1rem;
+  text-align: right;
+}
+
+.attribution a {
+  text-decoration: underline;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

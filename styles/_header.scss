@@ -23,12 +23,10 @@
     }
 
     &__item{
-        margin-right: 2rem;
+        margin-left: 2rem;
         align-self: center;
+        transition: transform 0.3s ease-in-out;
         
-        :last-child{
-            margin-right: 0;
-        }
         :hover::before{
             content: "";
             background-color: white;
@@ -47,5 +45,8 @@
             padding-bottom: 10px;
         }
         
+    }
+    &__item:first-child{
+        margin-left: 0;
     }
 }
