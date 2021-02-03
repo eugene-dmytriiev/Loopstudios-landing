@@ -2,7 +2,8 @@
 
 .flex-row{
     display: flex;
-    justify-items: flex-end;
+    flex-wrap: nowrap;
+    flex: 1 1 50%;
     position: relative;
 }
 
@@ -10,21 +11,21 @@
     padding: 100px 0;
     &__image{
         img{
-            
             max-width: 730px;
-            height: auto;
+            width: auto;
+            height: 100%;
         }
     }
 
     &__text{
-        padding: 95px 0 0 95px;
+        padding: 95px 0.5rem 0 95px;
         margin-top: auto;
-        max-width: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        justify-items: center;
-        justify-self: end;
+        max-width: 600px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+        // justify-items: center;
+        // justify-self: end;
         background-color: $color-white;
         margin-left: -10rem;
 

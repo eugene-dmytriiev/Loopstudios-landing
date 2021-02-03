@@ -97,7 +97,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-items: flex-end;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   position: relative;
 }
 
@@ -107,25 +111,14 @@
 
 .interactive__image img {
   max-width: 730px;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .interactive__text {
-  padding: 95px 0 0 95px;
+  padding: 95px 0.5rem 0 95px;
   margin-top: auto;
-  max-width: 700px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  justify-items: center;
-  justify-self: end;
+  max-width: 600px;
   background-color: white;
   margin-left: -10rem;
 }
@@ -180,21 +173,40 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .creations__tiles-tile {
   position: relative;
+  background-color: black;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .creations__tiles-tile img {
-  min-width: 260px;
+  min-width: 270px;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.95;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.creations__tiles-tile:hover {
+  background-color: white;
+}
+
+.creations__tiles-tile:hover > * {
+  color: black;
+}
+
+.creations__tiles-tile:hover img {
+  opacity: 0.4;
 }
 
 .creations__tiles-text {
@@ -203,8 +215,11 @@
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   font-size: 1.8rem;
+  z-index: 2;
   top: 78%;
   padding-left: 3rem;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .creations__tiles-tile > * {
@@ -293,6 +308,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -356,6 +373,85 @@ footer {
   top: 105%;
 }
 
+@media all and (max-width: 420px) {
+  img {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .container {
+    margin: 0;
+    padding: 0 1rem;
+  }
+  .menu__list {
+    display: none;
+  }
+  .hero {
+    width: auto;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+    padding: 3rem .5rem;
+  }
+  .hero__box {
+    max-width: 300px;
+    width: auto;
+  }
+  .flex-row {
+    display: block;
+  }
+  .interactive {
+    padding: 50px 0;
+  }
+  .interactive__image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .interactive__text {
+    padding: 30px 10px;
+    margin-left: 0;
+  }
+  .interactive__text-title {
+    font-size: 2rem;
+  }
+  .creations__title-text {
+    font-size: 2rem;
+  }
+  .creations__title-button {
+    display: none;
+  }
+  .creations__tiles-tile {
+    height: 130px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .creations__tiles-text {
+    top: 30%;
+  }
+  .flex-footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+  }
+}
+
 body {
   margin: 0;
   top: 0;
@@ -367,8 +463,8 @@ body {
 }
 
 .container {
-  max-width: 1130px;
-  padding: 0 5px;
+  max-width: 1140px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -376,7 +472,7 @@ body {
   background-color: black;
   color: white;
   font-family: "Josefin Sans", sans-serif;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   text-align: right;
 }
 

@@ -4,6 +4,7 @@
 @import 'about';
 @import 'creations';
 @import 'footer';
+@import 'mobile';
 
 body{
     margin: 0;
@@ -15,8 +16,8 @@ body{
 }
 
 .container{
-    max-width: 1130px;
-    padding: 0 5px;
+    max-width: 1140px;
+    padding: 0 10px;
     margin: 0 auto;
     
 }
@@ -29,6 +30,6 @@ body{
         text-decoration: underline;
         color: $color-white;
     }
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     text-align: right;
 }

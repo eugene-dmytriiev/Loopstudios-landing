@@ -1,0 +1,95 @@
+@import 'variables';
+
+@media all and (max-width: 420px){
+    img{
+        
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    .container{
+        margin: 0;
+        padding: 0 1rem;
+    }
+    .menu__list{
+        display: none;
+    }
+
+    .hero{
+        width: auto;
+        &__title{
+            font-size: 2.5rem;
+            padding: 3rem .5rem;
+        }
+
+        &__box{
+            max-width: 300px;
+            width: auto;
+        }
+    }
+
+    .flex-row{
+        display: block;
+
+    }
+    .interactive{
+        padding: 50px 0;
+        &__image{
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__text{
+            padding: 30px 10px;
+            margin-left: 0;
+
+            &-title{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .creations{
+        &__title{
+            &-text{
+                font-size: 2rem;
+            }
+
+            &-button{
+                display: none;
+            }
+        }
+
+        &__tiles{
+            &-tile{
+                height: 130px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &-text{
+                top: 30%;
+            }
+        }
+
+    }
+
+
+
+
+    .flex-footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer__list{
+        justify-content: center;
+        flex-direction: column;
+        justify-items: center;
+    }
+}
+
+
